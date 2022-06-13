@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da500762-41ef-41df-bc26-9f74ee7e83d9" name="Changes" comment="" />
+    <list default="true" id="da500762-41ef-41df-bc26-9f74ee7e83d9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/utils/ChatRoomUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/view/ChatAllFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,14 +36,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "last_opened_file_path": "/Users/lixiancheng/JavaProject/javaChatDemo/src/main",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="edu.hunau.cxb21.chatroom.client" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.hunau.cxb21.chatroom.client.utils" />
+      <recent name="edu.hunau.cxb21.chatroom.client.view" />
     </key>
   </component>
   <component name="RunManager">
