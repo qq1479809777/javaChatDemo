@@ -32,7 +32,7 @@ public class ChatAllFrame extends BaseFrame {
         if(Objects.nonNull(username)&&!username.equals("")){
             this.setTitle(username);
         }else{
-            this.setTitle("åŒ¿å");
+            this.setTitle("ÄäÃû");
         }
         this.setSize(550, 450);
         JSplitPane jSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
@@ -58,7 +58,7 @@ public class ChatAllFrame extends BaseFrame {
         JTextArea messageSendArea = new JTextArea();
         messageSendPane.setViewportView(messageSendArea);
         JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        JButton sendBtn = new JButton("å‘é€");
+        JButton sendBtn = new JButton("·¢ËÍ");
         sendBtn.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -76,7 +76,7 @@ public class ChatAllFrame extends BaseFrame {
 
     private JScrollPane leftPanel() {
         JScrollPane jScrollPane = new JScrollPane();
-        DefaultTableModel userInfoModel = new DefaultTableModel(new String[]{"åœ¨çº¿ç”¨æˆ·"}, 0);
+        DefaultTableModel userInfoModel = new DefaultTableModel(new String[]{"ÔÚÏßÓÃ»§"}, 0);
         Vector vector= new Vector(0);
         vector.add(username);
         userInfoModel.addRow(vector);

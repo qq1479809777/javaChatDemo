@@ -25,7 +25,7 @@ public class ServerFrame extends BaseFrame {
     }
     public void init() {
         this.setSize(800, 450);
-        this.setTitle("æœåŠ¡ç«¯");
+        this.setTitle("·şÎñ¶Ë");
         JPanel jPanel = new JPanel(new BorderLayout());
         jPanel.setBorder(new EmptyBorder(7, 10, 7, 10));
         jPanel.add(topPanel(), BorderLayout.NORTH);
@@ -40,12 +40,12 @@ public class ServerFrame extends BaseFrame {
         JPanel jPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         JTextField messageField = new JTextField(15);
         messageField.setPreferredSize(new Dimension(0, 28));
-        JButton sendBtn = new JButton("å‘é€");
+        JButton sendBtn = new JButton("·¢ËÍ");
         sendBtn.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String message =messageField.getText();
-                messageArea.append("ã€ç³»ç»Ÿç®¡ç†å‘˜ã€‘:\n"+ ChatRoomUtils.showMessage(message));
+                messageArea.append("¡¾ÏµÍ³¹ÜÀíÔ±¡¿:\n"+ ChatRoomUtils.showMessage(message));
                 messageField.setText("");
             }
         });
@@ -55,13 +55,13 @@ public class ServerFrame extends BaseFrame {
     }
 
     private JSplitPane middlePanel() {
-// è·å¾—åˆ†å‰²ç»„ä»¶ä¸ºæ°´å¹³æ‘†æ”¾çš„åˆ‡åˆ†é¢æ¿
+// »ñµÃ·Ö¸î×é¼şÎªË®Æ½°Ú·ÅµÄÇĞ·ÖÃæ°å
         JSplitPane jSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         jSplitPane.setDividerSize(5);
-        jSplitPane.setDividerLocation(150);// è®¾ç½®åˆ‡åˆ†ä½ç½®ä¸å¯ç§»åŠ¨
+        jSplitPane.setDividerLocation(150);// ÉèÖÃÇĞ·ÖÎ»ÖÃ²»¿ÉÒÆ¶¯
         jSplitPane.setEnabled(false);
-        JScrollPane leftPanel = new JScrollPane();//è¡¨æ ¼ä¸­çš„æ•°æ®// æä¾›å­—æ®µåç§°
-        DefaultTableModel clientInfoTableModel = new DefaultTableModel(new String[]{"å®¢æˆ·ç«¯åˆ—è¡¨"}, 0);
+        JScrollPane leftPanel = new JScrollPane();//±í¸ñÖĞµÄÊı¾İ// Ìá¹©×Ö¶ÎÃû³Æ
+        DefaultTableModel clientInfoTableModel = new DefaultTableModel(new String[]{"¿Í»§¶ËÁĞ±í"}, 0);
         clientTableModel=clientInfoTableModel;
         JTable clientTable = new JTable(clientInfoTableModel);
         leftPanel.setViewportView(clientTable);
@@ -75,28 +75,28 @@ public class ServerFrame extends BaseFrame {
 
     private JPanel topPanel() {
         JPanel jPanel = new JPanel();
-        JLabel jLabel = new JLabel("æœåŠ¡ç«¯å£");
+        JLabel jLabel = new JLabel("·şÎñ¶Ë¿Ú");
         JTextField portField = new JTextField();
         portField.setPreferredSize(new Dimension(50, 28));
-        // è®¾ç½®å†…å®¹åœ¨æ–‡æœ¬æ¡†ä¸­å±…ä¸­
-        portField.setHorizontalAlignment(JTextField.CENTER);// è®¾ç½®é»˜è®¤å€¼
+        // ÉèÖÃÄÚÈİÔÚÎÄ±¾¿òÖĞ¾ÓÖĞ
+        portField.setHorizontalAlignment(JTextField.CENTER);// ÉèÖÃÄ¬ÈÏÖµ
         portField.setText("8088");
-        // è®¾ç½®æŒ‰é’®çš„å›¾æ ‡
-        JButton executeBtn = new JButton("å¼€å¯æœåŠ¡");// TODO:å¯åŠ¨æœåŠ¡å™¨
+        // ÉèÖÃ°´Å¥µÄÍ¼±ê
+        JButton executeBtn = new JButton("¿ªÆô·şÎñ");// TODO:Æô¶¯·şÎñÆ÷
         executeBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String btnStatus = executeBtn.getText();
-                if (btnStatus.startsWith("å¼€å¯")) {
+                if (btnStatus.startsWith("¿ªÆô")) {
                    server= new Server(ServerFrame.this);
                     new Thread(server).start();
-// è®¾ç½®å›¾æ ‡
-                    executeBtn.setText("å…³é—­æœåŠ¡");
+// ÉèÖÃÍ¼±ê
+                    executeBtn.setText("¹Ø±Õ·şÎñ");
                 } else {
-//å…³é—­æœåŠ¡å™¨
+//¹Ø±Õ·şÎñÆ÷
                     if (Objects.nonNull(server)) {
                         server.close();
                     }
-                    executeBtn.setText("å¼€å¯æœåŠ¡");;
+                    executeBtn.setText("¿ªÆô·şÎñ");;
                 }
             }
         });
