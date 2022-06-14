@@ -7,36 +7,44 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.InetAddress;
 
 public class LoginFrame extends BaseFrame {
     public void init() {
-        this.setTitle("ç™»å½•");
-//åˆ›å»ºä¸€ä¸ªå‚ç›´æ’åˆ—çš„å®¹å™¨
+        this.setTitle("µÇÂ¼");
+//´´½¨Ò»¸ö´¹Ö±ÅÅÁĞµÄÈİÆ÷
         Box y_repeat = Box.createVerticalBox();
         y_repeat.add(Box.createVerticalStrut(15));
         JPanel titlePanel = new JPanel();
-        JLabel titleLabel = new JLabel("ç™»å½•æœåŠ¡å™¨");
-        titleLabel.setFont(new Font("é»‘ä½“", Font.BOLD, 30));
+        JLabel titleLabel = new JLabel("µÇÂ¼·şÎñÆ÷");
+        titleLabel.setFont(new Font("ºÚÌå", Font.BOLD, 30));
         titlePanel.add(titleLabel);
         y_repeat.add(titlePanel);
         y_repeat.add(Box.createVerticalStrut(5));
         JPanel userNamePanel = new JPanel();
-        JLabel userNameLabel = new JLabel("ç”¨æˆ·å");
+        JLabel userNameLabel = new JLabel("ÓÃ»§Ãû");
         JTextField userNameField = createTextField(20, 25);
         userNamePanel.add(userNameLabel);
         userNamePanel.add(userNameField);
         y_repeat.add(userNamePanel);
         y_repeat.add(Box.createVerticalStrut(5));
         JPanel hostPanel = new JPanel();
-        JLabel hostLabel = new JLabel("ä¸»æœºå");
+        JLabel hostLabel = new JLabel("Ö÷»úÃû");
         JTextField hostField = createTextField(20, 25);
-        hostField.setText("localhost");
+        String hostName;
+        try{
+             hostName = InetAddress.getLocalHost().getHostAddress();
+        }catch (Exception e){
+             hostName = "localhost";
+        }
+
+        hostField.setText(hostName);
         hostPanel.add(hostLabel);
         hostPanel.add(hostField);
         y_repeat.add(hostPanel);
         y_repeat.add(Box.createVerticalStrut(5));
         JPanel portPanel = new JPanel();
-        JLabel portLabel = new JLabel("ç«¯å£å·");
+        JLabel portLabel = new JLabel("¶Ë¿ÚºÅ");
         JTextField portField = createTextField(20, 25);
         portField.setText("8088");
         portPanel.add(portLabel);
@@ -44,20 +52,19 @@ public class LoginFrame extends BaseFrame {
         y_repeat.add(portPanel);
         y_repeat.add(Box.createVerticalStrut(5));
         JPanel btnPanel = new JPanel();
-        JButton restBtn = new JButton("é‡ç½®");
-        JButton connBtn = new JButton("è¿æ¥");//ä¸ºconnBtnç»‘å®šäº‹ä»¶
+        JButton restBtn = new JButton("ÖØÖÃ");
+        JButton connBtn = new JButton("Á¬½Ó");//ÎªconnBtn°ó¶¨ÊÂ¼ş
         connBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println("æŒ‰é’®è¢«å•å‡»");// ç”¨æˆ·å
-                String username = userNameField.getText();//ä¸»æœºåœ°å€
-                String hostName = hostField.getText();// ç«¯å£å·
-                String portInfo = portField.getText();//å°†å­—ç¬¦ä¸²è½¬æˆintç±»å‹
+                System.out.println("°´Å¥±»µ¥»÷");// ÓÃ»§Ãû
+                String username = userNameField.getText();//Ö÷»úµØÖ·
+                String hostName = hostField.getText();// ¶Ë¿ÚºÅ
+                String portInfo = portField.getText();//½«×Ö·û´®×ª³ÉintÀàĞÍ
                 int port = Integer.parseInt(portInfo.trim());
                 if ("".equals(username)) {
-                    username = "åŒ¿åç”¨æˆ·";
+                    username = "ÄäÃûÓÃ»§";
                 }
                 Client client = new Client(username, hostName, port);
-                client.start();
                 LoginFrame.this.dispose();
                 ChatAllFrame chatAllFrame = new ChatAllFrame(username, client);
                 client.setChatAllFrame(chatAllFrame);
