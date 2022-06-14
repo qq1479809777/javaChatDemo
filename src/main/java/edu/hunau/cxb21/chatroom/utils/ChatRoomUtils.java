@@ -1,4 +1,4 @@
-package edu.hunau.cxb21.chatroom.client.utils;
+package edu.hunau.cxb21.chatroom.utils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

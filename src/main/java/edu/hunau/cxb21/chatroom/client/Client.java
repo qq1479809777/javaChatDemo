@@ -1,7 +1,7 @@
 package edu.hunau.cxb21.chatroom.client;
 
 import edu.hunau.cxb21.chatroom.client.view.ChatAllFrame;
-import edu.hunau.cxb21.chatroom.client.utils.ChatRoomUtils;
+import edu.hunau.cxb21.chatroom.utils.ChatRoomUtils;
 
 import java.io.OutputStream;
 import java.io.PrintWriter;

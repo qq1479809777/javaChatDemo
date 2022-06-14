@@ -1,5 +1,6 @@
 package edu.hunau.cxb21.chatroom.client.view;
 
+import edu.hunau.cxb21.chatroom.client.Client;
 import edu.hunau.gui.utils.BaseFrame;
 
 import javax.swing.*;
@@ -55,6 +56,12 @@ public class LoginFrame extends BaseFrame {
                 if("".equals(username)){
                     username="匿名用户";
                 }
+                Client client=new Client(username, hostName, port);
+                client.start();
+                LoginFrame.this.dispose();
+                ChatAllFrame chatAllFrame=new ChatAllFrame(username,client);
+                client.setChatAllFrame(chatAllFrame);
+                chatAllFrame.init();
             }
         });
         btnPanel.add(restBtn);
