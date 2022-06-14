@@ -48,10 +48,10 @@ public class Server implements Runnable {
         if(Objects.nonNull(serverSocket)){
             try {
                 serverSocket.close();
-                JOptionPane.showMessageDialog(serverFrame,"æœåŠ¡å™¨å·²å…³é—­");
-                serverFrame.getMessageArea().append(ChatRoomUtils.showMessage("æœåŠ¡å™¨å…³é—­"));
+                JOptionPane.showMessageDialog(serverFrame,"·şÎñÆ÷ÒÑ¹Ø±Õ");
+                serverFrame.getMessageArea().append(ChatRoomUtils.showMessage("·şÎñÆ÷¹Ø±Õ"));
             }catch (IOException e){
-                JOptionPane.showMessageDialog(serverFrame,"æœåŠ¡å™¨ç¹å¿™");
+                JOptionPane.showMessageDialog(serverFrame,"·şÎñÆ÷·±Ã¦");
             }
         }
     }
@@ -64,31 +64,31 @@ public class Server implements Runnable {
         try {
             String hostName = InetAddress.getLocalHost().getHostAddress();
             int port = serverSocket.getLocalPort();
-            System.out.println("æœåŠ¡å™¨å¯åŠ¨ï¼Œç­‰å¾…å®¢æˆ·ç«¯è¿æ¥" + hostName + "ï¼Œç›‘å¬ç«¯å£" + port);
-            String message = "æœåŠ¡å™¨å¯åŠ¨æˆåŠŸ:ipåœ°å€ä¸º:" + hostName + "ï¼Œç›‘å¬ç«¯å£:" + port;
+            System.out.println("·şÎñÆ÷Æô¶¯£¬µÈ´ı¿Í»§¶ËÁ¬½Ó" + hostName + "£¬¼àÌı¶Ë¿Ú" + port);
+            String message = "·şÎñÆ÷Æô¶¯³É¹¦:ipµØÖ·Îª:" + hostName + "£¬¼àÌı¶Ë¿Ú:" + port;
 
             JOptionPane.showMessageDialog(serverFrame, message);
             serverFrame.getMessageArea().append(ChatRoomUtils.showMessage(message));
-            // å¦‚æœæœ‰å®¢æˆ·ç«¯è¿æ¥ï¼Œè¿”å›-scoketå®ä¾‹
+            // Èç¹ûÓĞ¿Í»§¶ËÁ¬½Ó£¬·µ»Ø-scoketÊµÀı
             Socket clientSocket = serverSocket.accept();
             String clientIP=clientSocket.getLocalAddress().getHostAddress();
-            System.out.printf("æœåŠ¡ç«¯ï¼šè·å¾—å®¢æˆ·ç«¯çš„è¿æ¥");
-            serverFrame.getMessageArea().append(ChatRoomUtils.showMessage("è·å¾—å®¢æˆ·ç«¯çš„è¿æ¥ï¼Œipåœ°å€ä¸ºï¼š"+clientIP));
-//            è¯»å–å®¢æˆ·ç«¯çš„å†…å®¹
+            System.out.printf("·şÎñ¶Ë£º»ñµÃ¿Í»§¶ËµÄÁ¬½Ó");
+            serverFrame.getMessageArea().append(ChatRoomUtils.showMessage("»ñµÃ¿Í»§¶ËµÄÁ¬½Ó£¬ipµØÖ·Îª£º"+clientIP));
+//            ¶ÁÈ¡¿Í»§¶ËµÄÄÚÈİ
             InputStream is =clientSocket.getInputStream();
             InputStreamReader isr=new InputStreamReader(is, Charset.forName("utf-8"));
             BufferedReader br =new BufferedReader(isr);
             String data = br.readLine();
-            serverFrame.getMessageArea().append(ChatRoomUtils.showMessage(data+"ç™»å½•ä¸Šçº¿"));
+            serverFrame.getMessageArea().append(ChatRoomUtils.showMessage(data+"µÇÂ¼ÉÏÏß"));
 
             Vector vector=new Vector(0);
             vector.add(data);
             serverFrame.getClientTableModel().addRow(vector);
             while (true){
                 String info = br.readLine();
-                System.out.printf("æ¥æ”¶åˆ°çš„æ•°æ®æ˜¯"+info);
+                System.out.printf("½ÓÊÕµ½µÄÊı¾İÊÇ"+info);
                 if(Objects.nonNull(info)&&!info.equals("")){
-                    serverFrame.getMessageArea().append("ã€"+data+"ã€‘ï¼š\n"+ChatRoomUtils.showMessage(info));
+                    serverFrame.getMessageArea().append("¡¾"+data+"¡¿£º\n"+ChatRoomUtils.showMessage(info));
                 }
             }
         } catch (IOException e) {

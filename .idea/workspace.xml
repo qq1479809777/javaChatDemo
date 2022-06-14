@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da500762-41ef-41df-bc26-9f74ee7e83d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/server/view/ServerFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/server/view/start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/server/view/stop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/utils/ChatRoomUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/utils/ChatRoomUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/view/ChatAllFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/view/ChatAllFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/view/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/client/view/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/server/view/ServerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/cxb21/chatroom/server/view/ServerFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hunau/gui/utils/BaseFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hunau/gui/utils/BaseFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,9 +51,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "last_opened_file_path": "/Users/lixiancheng/JavaProject/javaChatDemo/src/main/java/edu/hunau/cxb21/chatroom/client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
@@ -59,7 +78,7 @@
       <recent name="edu.hunau.cxb21.chatroom.client.utils" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.LoginFrame">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="javaChatDemo.main" />
@@ -67,8 +86,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.hunau.cxb21.chatroom.client.view.LoginFrame" />
+      <module name="javaChatDemo.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.hunau.cxb21.chatroom.client.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginFrame" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -81,7 +114,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655038920671</updated>
+      <workItem from="1655184478875" duration="938000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
