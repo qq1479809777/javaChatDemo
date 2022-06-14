@@ -15,7 +15,7 @@ public class App {
             @Override
             public void run() {
                 new LoginFrame().init();
-
+                System.out.printf("你好啊");
             }
         });
     }
