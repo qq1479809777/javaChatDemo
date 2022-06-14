@@ -58,7 +58,7 @@ public class Client {
                     if(!messageQueue.isEmpty()&&messageQueue.size()>0){
                         System.out.printf("client-sendMessage==>"+messageQueue);
                         String message=messageQueue.remove(0);
-                        chatAllFrame.getMessageShowArea().append("¡¾"+username+"¡¿£º\n"+ChatRoomUtils.showMessage(message));
+                        chatAllFrame.getMessageShowArea().append("ã€"+username+"ã€‘ï¼š\n"+ChatRoomUtils.showMessage(message));
                         out.println(message);
                     }
                 }

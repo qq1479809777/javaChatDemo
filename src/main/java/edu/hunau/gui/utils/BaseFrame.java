@@ -11,7 +11,7 @@ public class BaseFrame extends JFrame {
 
     public void center(Window win) {
         /**
-         * »ñÈ¡ÆÁÄ»µÄ´óĞ¡
+         * è·å–å±å¹•çš„å¤§å°
          */
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension screen = toolkit.getScreenSize();
