@@ -17,10 +17,12 @@ public class ClientHandlerThread extends Thread{
     private String username;
     private ObjectInputStream ois;
     private ObjectOutputStream oos;
+    private Server server;
 
-    public ClientHandlerThread(Socket socket) {
+    public ClientHandlerThread(Server server,Socket socket) {
         super();
         this.socket = socket;
+        this.server=server;
     }
 
     public void run(){
@@ -45,12 +47,15 @@ public class ClientHandlerThread extends Thread{
                         message.setContent("上线了");
                         //通知其他人，xx上线了
                         sendToOther(message);
+                        server.showMsg(message.getUsername()+":"+message.getContent());
                 }else if(message.getCode() == Code.CHAT){
                     //如果是聊天信息，把消息转发给其他在线客户端
+                    server.showMsg(message.getUsername()+":"+message.getContent());
                     sendToOther(message);
                 }else if(message.getCode() == Code.LOGOUT){
                     //通知其他人，xx下线了
                     message.setContent("下线了");
+                    server.showMsg(message.getUsername()+":"+message.getContent());
                     sendToOther(message);
                     break;
                 }

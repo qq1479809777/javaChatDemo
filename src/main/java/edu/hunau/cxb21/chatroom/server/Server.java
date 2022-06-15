@@ -26,6 +26,11 @@ public class Server implements Runnable{
             throw new RuntimeException(e);
         }
     }
+    public void showMsg(String msg){
+        if(Objects.nonNull(serverFrame)){
+            serverFrame.getMessageArea().append(ChatRoomUtils.showMessage(msg));
+        }
+    }
 
     public Server() {
         try {
@@ -71,7 +76,7 @@ public class Server implements Runnable{
 
             while(true){
                 Socket ct = serverSocket.accept();
-                ClientHandlerThread client = new ClientHandlerThread(ct);
+                ClientHandlerThread client = new ClientHandlerThread(Server.this,ct);
                 client.start();
             }
         } catch (IOException e) {
